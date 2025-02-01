@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="styles/index.css" />
+  </head>
+  <body>
+    <h1>snaccs</h1>
+
+    <details open>
+      <summary class="p-l">Space</summary>
+
+      <flex-stack horizontal="start" gap="xs">
+        <div style="background: black" class="size-4xl"></div>
+        <div style="background: black" class="size-3xl"></div>
+        <div style="background: black" class="size-2xl"></div>
+        <div style="background: black" class="size-xl"></div>
+        <div style="background: black" class="size-l"></div>
+        <div style="background: black" class="size-m base"></div>
+        <div style="background: black" class="size-s"></div>
+        <div style="background: black" class="size-xs"></div>
+        <div style="background: black" class="size-2xs"></div>
+        <div style="background: black" class="size-3xs"></div>
+        <div style="background: black" class="size-none"></div>
+      </flex-stack>
+    </details>
+
+    <details open>
+      <summary class="p-l">Form</summary>
+      <div>
+        <form>
+          <flex-stack gap="s">
+            <flex-stack gap="2xs">
+              <label class="fs--1" for="name">Name</label>
+              <input class="input" type="text" id="name" name="name" />
+            </flex-stack>
+
+            <flex-stack gap="2xs">
+              <label class="fs--1" for="email">Email</label>
+              <input class="input" type="email" id="email" name="email" />
+            </flex-stack>
+
+            <flex-stack gap="2xs">
+              <label class="fs--1" for="password">Password</label>
+              <input
+                class="input"
+                type="password"
+                id="password"
+                name="password"
+              />
+            </flex-stack>
+          </flex-stack>
+          <button class="button" type="submit">Submit</button>
+        </form>
+      </div>
+    </details>
+  </body>
+</html>

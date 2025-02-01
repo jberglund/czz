@@ -1,0 +1,3 @@
+:where(.debug) :where(*, *::before, *::after) {
+  outline: 1px solid oklch(from var(--debug-color, lime) l c h / 0.5);
+}

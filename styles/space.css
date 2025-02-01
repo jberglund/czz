@@ -1,0 +1,121 @@
+@property --base-space-factor {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 1.5;
+}
+
+:root {
+  font-family: system-ui;
+  font-size: 1rem;
+  --rounding-interval: 0.5px;
+  /* try other units, such as rex, rlh, etc. https://developer.mozilla.org/en-US/docs/Web/CSS/length#relative_length_units_based_on_root_elements_font */
+  --base-space-unit: 2rex;
+
+  --space-4xl: round(
+    down,
+    calc(pow(var(--base-space-factor), 5) * var(--base-space-unit)),
+    var(--rounding-interval)
+  );
+  --space-3xl: round(
+    down,
+    calc(pow(var(--base-space-factor), 4) * var(--base-space-unit)),
+    var(--rounding-interval)
+  );
+  --space-2xl: round(
+    down,
+    calc(pow(var(--base-space-factor), 3) * var(--base-space-unit)),
+    var(--rounding-interval)
+  );
+  --space-xl: round(
+    down,
+    calc(pow(var(--base-space-factor), 2) * var(--base-space-unit)),
+    var(--rounding-interval)
+  );
+  --space-l: round(
+    down,
+    calc(pow(var(--base-space-factor), 1) * var(--base-space-unit)),
+    var(--rounding-interval)
+  );
+  --space-m: round(
+    down,
+    calc(pow(var(--base-space-factor), 0) * var(--base-space-unit)),
+    var(--rounding-interval)
+  );
+  --space-s: round(
+    down,
+    calc(pow(var(--base-space-factor), -1) * var(--base-space-unit)),
+    var(--rounding-interval)
+  );
+  --space-xs: round(
+    down,
+    calc(pow(var(--base-space-factor), -2) * var(--base-space-unit)),
+    var(--rounding-interval)
+  );
+  --space-2xs: round(
+    down,
+    calc(pow(var(--base-space-factor), -3) * var(--base-space-unit)),
+    var(--rounding-interval)
+  );
+  --space-3xs: round(
+    down,
+    calc(pow(var(--base-space-factor), -4) * var(--base-space-unit)),
+    var(--rounding-interval)
+  );
+
+  --space-none: 0;
+}
+
+.size-4xl {
+  width: var(--space-4xl);
+  height: var(--space-4xl);
+}
+
+.size-3xl {
+  width: var(--space-3xl);
+  height: var(--space-3xl);
+}
+
+.size-2xl {
+  width: var(--space-2xl);
+  height: var(--space-2xl);
+}
+
+.size-xl {
+  width: var(--space-xl);
+  height: var(--space-xl);
+}
+
+.size-l {
+  width: var(--space-l);
+  height: var(--space-l);
+}
+
+.size-m {
+  width: var(--space-m);
+  height: var(--space-m);
+}
+
+.size-s {
+  width: var(--space-s);
+  height: var(--space-s);
+}
+
+.size-xs {
+  width: var(--space-xs);
+  height: var(--space-xs);
+}
+
+.size-2xs {
+  width: var(--space-2xs);
+  height: var(--space-2xs);
+}
+
+.size-3xs {
+  width: var(--space-3xs);
+  height: var(--space-3xs);
+}
+
+.size-none {
+  width: var(--space-none);
+  height: var(--space-none);
+}

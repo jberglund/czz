@@ -1,6 +1,9 @@
 {
-  "name": "czz",
+  "name": "snaccs",
   "version": "1.0.0",
-  "main": "src/index.css",
-  "license": "MIT"
+  "main": "styles/index.css",
+  "license": "MIT",
+  "files": [
+    "./styles"
+  ]
 }

@@ -1,0 +1,75 @@
+:root {
+  --color-background-interactive-primary: var(--color-accent-700);
+  --color-foreground-interactive-primary: white;
+
+  --_button-padding-block: var(--space-3xs);
+  --_button-padding-inline: var(--space-xs);
+}
+
+.button {
+  --_button-background: var(--bg-color-interactive);
+  --_button-color: var(--fg-color-interactive);
+  --_button-border-color: var(--_button-background);
+}
+
+.button-secondary {
+  /* --_button-background: oklch(
+    from var(--bg-color-interactive) 1 c h
+  ); */
+  --_button-color: var(--bg-color-interactive);
+  --_button-border-color: var(--bg-color-interactive);
+}
+.button-dimmed {
+  --_button-color: var(--bg-color-interactive);
+  --_button-background: var(--bg-color-interactive);
+  --_button-background-alpha: 12%;
+}
+
+:is(.button, .button-secondary, .button-dimmed) {
+  --_button-height: var(--interactive-height-default);
+  --_button-border-radius: var(--border-radius-pill);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: var(--_button-height);
+  min-width: calc(var(--_button-height) * 2);
+  max-width: calc(var(--_button-height) * 10);
+  padding: var(--_button-padding-block) var(--_button-padding-inline);
+
+  font-size: var(--font-size--1);
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+
+  color: var(--_button-color);
+  background-color: oklch(
+    from var(--_button-background-override, var(--_button-background)) l c h /
+      var(--_button-background-alpha, 100%)
+  );
+
+  border: 2px solid var(--_button-border-color);
+  border-radius: var(--_button-border-radius);
+
+  transition: background-color var(--transition-quickly),
+    color var(--transition-quickly), transform var(--transition-quickly);
+
+  cursor: pointer;
+  /* text-shadow: 0px 1px 0px
+    oklch(from var(--color-background-interactive-primary) calc(l * 0.5) c h); */
+}
+
+:is(.button, .button-secondary, .button-dimmed):hover {
+  --_button-background-override: oklch(
+    from var(--_button-background) calc(l - 0.03) c h
+  );
+}
+:is(.button, .button-secondary, .button-dimmed):active {
+  --_button-background-override: oklch(
+    from var(--_button-background) calc(l - 0.06) c h
+  );
+  /* transform: scale(0.97); */
+  transform: translateY(1px);
+}
