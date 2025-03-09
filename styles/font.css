@@ -57,60 +57,84 @@
   --_font-size-max--1: calc(1rem * pow(var(--typescale-max), -1));
   --_font-size-max--2: calc(1rem * pow(var(--typescale-max), -2));
 
-  --font-size-0: clamp(
-    var(--_font-size-min-0),
-    var(--_font-size-min-0) +
-      (var(--curve) * (var(--_font-size-max-0) - var(--_font-size-min-0))),
-    var(--_font-size-max-0)
+  --font-size-0: round(
+    clamp(
+      var(--_font-size-min-0),
+      var(--_font-size-min-0) +
+        (var(--curve) * (var(--_font-size-max-0) - var(--_font-size-min-0))),
+      var(--_font-size-max-0)
+    ),
+    var(--rounding-interval)
   );
 
-  --font-size-1: clamp(
-    var(--_font-size-min-1),
-    var(--_font-size-min-1) +
-      (var(--curve) * (var(--_font-size-max-1) - var(--_font-size-min-1))),
-    var(--_font-size-max-1)
+  --font-size-1: round(
+    clamp(
+      var(--_font-size-min-1),
+      var(--_font-size-min-1) +
+        (var(--curve) * (var(--_font-size-max-1) - var(--_font-size-min-1))),
+      var(--_font-size-max-1)
+    ),
+    var(--rounding-interval)
   );
 
-  --font-size-2: clamp(
-    var(--_font-size-min-2),
-    var(--_font-size-min-2) +
-      (var(--curve) * (var(--_font-size-max-2) - var(--_font-size-min-2))),
-    var(--_font-size-max-2)
+  --font-size-2: round(
+    clamp(
+      var(--_font-size-min-2),
+      var(--_font-size-min-2) +
+        (var(--curve) * (var(--_font-size-max-2) - var(--_font-size-min-2))),
+      var(--_font-size-max-2)
+    ),
+    var(--rounding-interval)
   );
 
-  --font-size-3: clamp(
-    var(--_font-size-min-3),
-    var(--_font-size-min-3) +
-      (var(--curve) * (var(--_font-size-max-3) - var(--_font-size-min-3))),
-    var(--_font-size-max-3)
+  --font-size-3: round(
+    clamp(
+      var(--_font-size-min-3),
+      var(--_font-size-min-3) +
+        (var(--curve) * (var(--_font-size-max-3) - var(--_font-size-min-3))),
+      var(--_font-size-max-3)
+    ),
+    var(--rounding-interval)
   );
 
-  --font-size-4: clamp(
-    var(--_font-size-min-4),
-    var(--_font-size-min-4) +
-      (var(--curve) * (var(--_font-size-max-4) - var(--_font-size-min-4))),
-    var(--_font-size-max-4)
+  --font-size-4: round(
+    clamp(
+      var(--_font-size-min-4),
+      var(--_font-size-min-4) +
+        (var(--curve) * (var(--_font-size-max-4) - var(--_font-size-min-4))),
+      var(--_font-size-max-4)
+    ),
+    var(--rounding-interval)
   );
 
-  --font-size-5: clamp(
-    var(--_font-size-min-5),
-    var(--_font-size-min-5) +
-      (var(--curve) * (var(--_font-size-max-5) - var(--_font-size-min-5))),
-    var(--_font-size-max-5)
+  --font-size-5: round(
+    clamp(
+      var(--_font-size-min-5),
+      var(--_font-size-min-5) +
+        (var(--curve) * (var(--_font-size-max-5) - var(--_font-size-min-5))),
+      var(--_font-size-max-5)
+    ),
+    var(--rounding-interval)
   );
 
-  --font-size--1: clamp(
-    var(--_font-size-min--1),
-    var(--_font-size-min--1) +
-      (var(--curve) * (var(--_font-size-max--1) - var(--_font-size-min--1))),
-    var(--_font-size-max--1)
+  --font-size--1: round(
+    clamp(
+      var(--_font-size-min--1),
+      var(--_font-size-min--1) +
+        (var(--curve) * (var(--_font-size-max--1) - var(--_font-size-min--1))),
+      var(--_font-size-max--1)
+    ),
+    var(--rounding-interval)
   );
 
-  --font-size--2: clamp(
-    var(--_font-size-min--2),
-    var(--_font-size-min--2) +
-      (var(--curve) * (var(--_font-size-max--2) - var(--_font-size-min--2))),
-    var(--_font-size-max--2)
+  --font-size--2: round(
+    clamp(
+      var(--_font-size-min--2),
+      var(--_font-size-min--2) +
+        (var(--curve) * (var(--_font-size-max--2) - var(--_font-size-min--2))),
+      var(--_font-size-max--2)
+    ),
+    var(--rounding-interval)
   );
 }
 

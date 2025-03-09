@@ -7,9 +7,9 @@
 :root {
   font-family: system-ui;
   font-size: 1rem;
-  --rounding-interval: 0.5px;
+  --rounding-interval: 1px;
   /* try other units, such as rex, rlh, etc. https://developer.mozilla.org/en-US/docs/Web/CSS/length#relative_length_units_based_on_root_elements_font */
-  --base-space-unit: 2rex;
+  --base-space-unit: 1rem;
 
   --space-4xl: round(
     down,
